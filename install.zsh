@@ -16,7 +16,7 @@ function abspath()
 }
 
 CONF_DIR="${0%/*}"
-FILES=(oh-my-zsh zshrc)
+FILES=(oh-my-zsh zshrc zsh.d)
 
 for item in $FILES; do
     src="${CONF_DIR}/${item}"
