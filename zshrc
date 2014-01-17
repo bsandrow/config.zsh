@@ -29,10 +29,13 @@ export UPDATE_ZSH_DAYS=30           # Up
 # yyyy-mm-dd
 # HIST_STAMPS="mm/dd/yyyy"
 
+# Don't automatically attempt to load virtualenvs when cd'ing around.
+DISABLE_VENV_CD=1
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew fabric git virtualenv virtualenvwrapper)
+plugins=(brew fabric git virtualenv virtualenvwrapper tmuxinator)
 
 source $ZSH/oh-my-zsh.sh
 
