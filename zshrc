@@ -58,4 +58,10 @@ function syspip() { PIP_REQUIRE_VIRTUALENV="" pip "$@"; }
 
 export WORKON_HOME="$HOME/.virtualenvs"
 
+function nginx_referer() {
+    local logfile="$1"
+    local pager="${PAGER:-less}"
+    awk '{ print $11 }' < "$logfile" | sort | uniq -c | sort -nr | "$pager"
+}
+
 # export MANPATH="/usr/local/man:$MANPATH"
