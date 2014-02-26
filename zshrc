@@ -64,4 +64,7 @@ function nginx_referer() {
     awk '{ print $11 }' < "$logfile" | sort | uniq -c | sort -nr | "$pager"
 }
 
+# Force ssh to use password authentication
+alias ssh-use-pword='ssh -o PreferredAuthentications=keyboard-interactive -o PubkeyAuthentication=no'
+
 # export MANPATH="/usr/local/man:$MANPATH"
