@@ -67,4 +67,6 @@ function nginx_referer() {
 # Force ssh to use password authentication
 alias ssh-use-pword='ssh -o PreferredAuthentications=keyboard-interactive -o PubkeyAuthentication=no'
 
+alias 256colors='for code in {0..255}; do echo -e "\e[38;05;${code}m $code: Test"; done'
+
 # export MANPATH="/usr/local/man:$MANPATH"
