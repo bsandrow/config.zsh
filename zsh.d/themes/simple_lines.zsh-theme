@@ -1,4 +1,4 @@
-local return_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
+local return_status="%(?:%{$fg[green]%}➜ :%{$fg[red]%}➜ %s)"
 local basic_info="$FG[202]%n$reset_color on $FG[001]%m$reset_color in $FG[107]%~$reset_color"
 
 function meta_prompt_info() {
