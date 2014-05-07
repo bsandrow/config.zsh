@@ -11,6 +11,7 @@ export ZSH_CUSTOM="$HOME/.zsh.d"    # oh-my-zsh customization directory
 # time that oh-my-zsh is loaded.
 ZSH_THEME="simple_lines"
 
+export rvm_path="$HOME/.rvm"    # Setup for rvm plugin
 # CASE_SENSITIVE="true"             # case-sensitive completion
 # DISABLE_AUTO_UPDATE="true"        # Disable auto-update
 export UPDATE_ZSH_DAYS=30           # Up
@@ -35,7 +36,7 @@ DISABLE_VENV_CD=1
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew fabric git virtualenv virtualenvwrapper tmuxinator pip python vundle)
+plugins=(brew fabric git virtualenv virtualenvwrapper tmuxinator pip python vundle rvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -44,6 +45,10 @@ source $ZSH/oh-my-zsh.sh
 # ------------------
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# if [ -n "$rvm_path" -a -d "$rvm_path" ]; then
+#     export PATH="$PATH:$rvm_path"
+# fi
 
 setopt NOBEEP       # No more beeps! Huzzah! \o/
 setopt NO_NOMATCH   # Don't die when a glob expansion matches no files
