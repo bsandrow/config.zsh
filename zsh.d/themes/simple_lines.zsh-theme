@@ -2,7 +2,9 @@ local return_status="%(?:%{$fg[green]%}➜ :%{$fg[red]%}➜ %s)"
 local basic_info="$FG[202]%n$reset_color on $FG[001]%m$reset_color in $FG[107]%~$reset_color"
 
 function sowingo_info() {
-    echo "sowingo_env:%{$fg[red]%}$SOWINGO_ENV%{$reset_color%}"
+    if [ -n "$SOWINGO_ENV" ]; then
+        echo "sowingo_env:%{$fg[red]%}$SOWINGO_ENV%{$reset_color%}"
+    fi
 }
 
 function meta_prompt_info() {
