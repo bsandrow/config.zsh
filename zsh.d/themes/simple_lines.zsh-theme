@@ -1,12 +1,6 @@
 local return_status="%(?:%{$fg[green]%}➜ :%{$fg[red]%}➜ %s)"
 local basic_info="$FG[202]%n$reset_color on $FG[001]%m$reset_color in $FG[107]%~$reset_color"
 
-function sowingo_info() {
-    if [ -n "$SOWINGO_ENV" ]; then
-        echo "sowingo_env:%{$fg[red]%}$SOWINGO_ENV%{$reset_color%}"
-    fi
-}
-
 function meta_prompt_info() {
     local prompt_metainfo_cmds
     prompt_metainfo_cmds=('git_prompt_info' 'virtualenv_prompt_info')
