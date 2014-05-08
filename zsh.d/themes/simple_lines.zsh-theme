@@ -19,7 +19,7 @@ function meta_prompt_info() {
     metainfo=()
     for part in $prompt_metainfo_cmds; do
         RESULT="$($part)"
-        if [[ $? = 0 -a -n "$RESULT" ]]; then
+        if [ "$?" = "0" -a -n "$RESULT" ]; then
             metainfo+=("$RESULT")
         fi
     done
