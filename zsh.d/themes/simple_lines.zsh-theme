@@ -33,7 +33,12 @@ function meta_prompt_info() {
     fi
 }
 
-PROMPT='%{${basic_info} $(meta_prompt_info)%{$reset_color%}
+function bjs__prompt_line() {
+    env COLUMNS="${COLUMNS:-$(tput cols)}" perl -Mutf8 -CS -e 'print "-" x $ENV{COLUMNS}, "\n";'
+}
+
+
+PROMPT='%{$(bjs__prompt_line)$reset_color${basic_info} $(meta_prompt_info)%{$reset_color%}
 %}${return_status}%{$reset_color%} '
 
 ZSH_THEME_VIRTUALENV_PROMPT_PREFIX="virtualenv:%{$fg[red]%}"
