@@ -81,4 +81,6 @@ alias ssh-use-pword='ssh -o PreferredAuthentications=keyboard-interactive -o Pub
 
 alias 256colors='for code in {0..255}; do echo -e "\e[38;05;${code}m $code: Test"; done'
 
+compdef _flaskscript manage.py
+
 # export MANPATH="/usr/local/man:$MANPATH"
