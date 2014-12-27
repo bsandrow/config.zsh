@@ -33,12 +33,20 @@ function meta_prompt_info() {
     fi
 }
 
+# Unicode: BULLET U+2022
+# Unicode: MIDDLE DOT U+00B7
+# Unicode: WAVY DASH U+3030
+# Unicode: WAVY LINE U+2307
+# Unicode: WAVE DASH U+301C
+# Unicode: BLACK STAR U+2605
+
 function bjs__prompt_line() {
-    env COLUMNS="${COLUMNS:-$(tput cols)}" perl -Mutf8 -CS -e 'print "-" x $ENV{COLUMNS}, "\n";'
+    env COLUMNS="${COLUMNS:-$(tput cols)}" perl -Mutf8 -CS -e 'my $width= $ENV{COLUMNS}; printf "%.${width}s", "\N{U+00B7}" x $ENV{COLUMNS};'
 }
 
 
-PROMPT='%{$(bjs__prompt_line)$reset_color${basic_info} $(meta_prompt_info)%{$reset_color%}
+PROMPT='%{$(bjs__prompt_line)
+$reset_color${basic_info} $(meta_prompt_info)%{$reset_color%}
 %}${return_status}%{$reset_color%} '
 
 ZSH_THEME_VIRTUALENV_PROMPT_PREFIX="virtualenv:%{$fg[red]%}"
