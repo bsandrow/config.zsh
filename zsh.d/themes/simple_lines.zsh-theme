@@ -33,6 +33,10 @@ function meta_prompt_info() {
     fi
 }
 
+function hrule () {
+    env COLUMNS="${COLUMNS:-$(tput cols)}" perl -e 'print "'"$1"'" x $ENV{COLUMNS};'
+}
+
 # Unicode: BULLET U+2022
 # Unicode: MIDDLE DOT U+00B7
 # Unicode: WAVY DASH U+3030
@@ -40,10 +44,9 @@ function meta_prompt_info() {
 # Unicode: WAVE DASH U+301C
 # Unicode: BLACK STAR U+2605
 
-PROMPT='$reset_color${basic_info} $(meta_prompt_info)%{$reset_color%}
+PROMPT='$reset_color$FG[238]'$'%B$(hrule _)%b''
+$reset_color${basic_info} $(meta_prompt_info)%{$reset_color%}
 %}${return_status}%{$reset_color%} '
-
-PROMPT="$FG[238]"$'%U${(r:$COLUMNS:: :)}%u'$PROMPT
 
 ZSH_THEME_VIRTUALENV_PROMPT_PREFIX="virtualenv:%{$fg[red]%}"
 ZSH_THEME_VIRTUALENV_PROMPT_SUFFIX="%{$reset_color%}"
