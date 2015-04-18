@@ -16,7 +16,7 @@ export rvm_path="$HOME/.rvm"    # Setup for rvm plugin
 # DISABLE_AUTO_UPDATE="true"        # Disable auto-update
 export UPDATE_ZSH_DAYS=30           # Up
 # DISABLE_LS_COLORS="true"            # Disable colors in ls
-# DISABLE_AUTO_TITLE="true"           # disable automatic setting of terminal title
+DISABLE_AUTO_TITLE="true"           # disable automatic setting of terminal title
 # DISABLE_CORRECTION="true"           # Disable command autocorrection
 # COMPLETION_WAITING_DOTS="true"      # Display red dots while waiting for completion?
 
