@@ -1,5 +1,6 @@
 local return_status="%(?:%{$fg[green]%}➜ :%{$fg[red]%}➜ %s)"
-local basic_info="$FG[202]%n$reset_color on $FG[001]%m$reset_color in $FG[107]%~$reset_color"
+local basic_info="$FG[202]%n$reset_color on $FG[001]%m$reset_color in $FG[107]%2/$reset_color"
+#local basic_info="$FG[202]%n$reset_color on $FG[001]%m$reset_color in $FG[107]%~$reset_color"
 
 function meta_prompt_info() {
     local prompt_metainfo_cmds
@@ -44,11 +45,10 @@ function hrule () {
 # Unicode: WAVE DASH U+301C
 # Unicode: BLACK STAR U+2605
 
-PROMPT='$reset_color$FG[238]'$'%B$(hrule _)%b''
-$reset_color${basic_info} $(meta_prompt_info)%{$reset_color%}
+PROMPT='$reset_color${basic_info} $(meta_prompt_info)%{$reset_color%}
 %}${return_status}%{$reset_color%} '
 
-ZSH_THEME_VIRTUALENV_PROMPT_PREFIX="virtualenv:%{$fg[red]%}"
+ZSH_THEME_VIRTUALENV_PROMPT_PREFIX="venv:%{$fg[red]%}"
 ZSH_THEME_VIRTUALENV_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_PREFIX="git:%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
