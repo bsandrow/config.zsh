@@ -1,4 +1,4 @@
-local return_status="%(?:%{$fg[green]%}♥:%{$fg[red]%}♥%s)"
+local return_code="%(?::%{%B$fg[red]%}%?%{$reset_color%} )"
 
 function meta_prompt_info() {
     local prompt_metainfo_cmds
@@ -45,7 +45,7 @@ function host_info() {
 # Unicode: WAVE DASH U+301C
 # Unicode: BLACK STAR U+2605
 
-PROMPT='$FG[107]%2/%{$reset_color%} ${return_status}%{$reset_color%} » '
+PROMPT='$FG[107]%2/%{$reset_color%} $return_code» '
 RPROMPT='$(meta_prompt_info)%{$reset_color%}'
 
 HOST_INFO_THEME="host:%{$fg[red]%}%m%{$reset_color%}"
