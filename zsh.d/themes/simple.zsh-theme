@@ -1,4 +1,4 @@
-local return_status="%(?:%{$fg[green]%}➜ :%{$fg[red]%}➜ %s)"
+local return_status="%(?:%{$fg[green]%}♥:%{$fg[red]%}♥%s)"
 
 function meta_prompt_info() {
     local prompt_metainfo_cmds
@@ -45,14 +45,14 @@ function host_info() {
 # Unicode: WAVE DASH U+301C
 # Unicode: BLACK STAR U+2605
 
-PROMPT='$FG[107]%2/%{$reset_color%} ${return_status}%{$reset_color%} '
+PROMPT='$FG[107]%2/%{$reset_color%} ${return_status}%{$reset_color%} » '
 RPROMPT='$(meta_prompt_info)%{$reset_color%}'
 
 HOST_INFO_THEME="host:%{$fg[red]%}%m%{$reset_color%}"
 
-ZSH_THEME_VIRTUALENV_PROMPT_PREFIX="virtualenv:%{$fg[red]%}"
+ZSH_THEME_VIRTUALENV_PROMPT_PREFIX="v:%{$fg[red]%}"
 ZSH_THEME_VIRTUALENV_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_PREFIX="git:%{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="g:%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%}'%{$fg[default]%}%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[default]%}"
