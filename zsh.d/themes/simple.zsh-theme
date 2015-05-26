@@ -1,5 +1,5 @@
 # local return_code="%(?:%{$fg[green]%}(^.^%):%{%B$fg[red]%}(T.T%))%{$reset_color%}"
-local return_code="%(?.%{$fg[green]%}:%).%{%B$fg[red]%}:()%{$reset_color%}"
+local return_code="%(?.%{$fg[green]%}:%).%{%B$fg[red]%}:()%{$reset_color%b%}"
 
 function meta_prompt_info() {
     local prompt_metainfo_cmds
