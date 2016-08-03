@@ -53,15 +53,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 setopt NOBEEP       # No more beeps! Huzzah! \o/
 setopt NO_NOMATCH   # Don't die when a glob expansion matches no files
 
-if [ "$(uname)" = "Darwin" ] && which mvim >/dev/null 2>&1; then
-    # # If we're on a Mac and MacVim's command exists, use that
-    # export EDITOR='mvim -f'
-    # export VISUAL='mvim -f'
-    export EDITOR='emacsclient -c' VISUAL='emacsclient -c'
-else
-    export EDITOR=vim
-    export VISUAL=vim
-fi
+export EDITOR=vim
+export VISUAL=vim
 
 # Make pip require that a VirtualEnv is set, but create the 'syspip' command
 # quickly override that if we need to.
