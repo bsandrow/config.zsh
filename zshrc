@@ -9,7 +9,8 @@ export ZSH_CUSTOM="$HOME/.zsh.d"    # oh-my-zsh customization directory
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="simple"
+# ZSH_THEME="simple"
+ZSH_THEME="avit"
 
 export rvm_path="$HOME/.rvm"    # Setup for rvm plugin
 # CASE_SENSITIVE="true"             # case-sensitive completion
